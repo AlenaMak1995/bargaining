@@ -1,5 +1,5 @@
-from bargaining.envs.gridworld import ACTIONS
-from bargaining.envs.slip import slip_transitions
+from envs.gridworld import ACTIONS
+from envs.slip import slip_transitions
 import numpy as np
 
 def build_flow_A_b(n_rows, n_cols, start, goal, slip, sa_list, sa_idx):

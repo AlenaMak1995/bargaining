@@ -1,10 +1,11 @@
 import numpy as np
 import cvxpy as cp
 
-from bargaining.models.indexing import build_sa_index
-from bargaining.models.costs import build_cost_vectors
-from bargaining.models.flow import build_flow_A_b
-from bargaining.envs.gridworld import ACTIONS
+from models.indexing import build_sa_index
+from models.costs import build_cost_vectors
+from models.flow import build_flow_A_b
+from envs.gridworld import ACTIONS
+
 
 
 def projected_primal_dual_loop(

@@ -2,3 +2,4 @@ numpy
 cvxpy
 pyyaml
 matplotlib
+pandas

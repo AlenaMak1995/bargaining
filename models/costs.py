@@ -1,5 +1,5 @@
-from bargaining.envs.slip import slip_transitions
-
+from envs.slip import slip_transitions
+import numpy as np
 
 def build_cost_vectors(price_grid, energy_grid, time_grid, start, goal, n_rows, n_cols, sa_list, slip):
     price_grid = np.asarray(price_grid, float)
