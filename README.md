@@ -119,7 +119,7 @@ The primal–dual algorithm in the paper enforces its optimality conditions impl
 
 ### Algorithms Implemented
 
-#### Numeric Counterfactual Bargaining
+## Numeric Counterfactual Bargaining
 
 **Problem setup**
 
@@ -235,9 +235,9 @@ Arrow length corresponds to action probability.
 </p>
 
 
-#### PCTL / Until Extension
+##  PCTL / Until Extension
 
-# Experiment 4 — PCTL Avoidance under Slip (Baseline Infeasible)
+### Experiment 4 — PCTL Avoidance under Slip (Baseline Infeasible)
 
 **World:** 5×5 grid, slip=0.1  
 **Unsafe region:** G2 (highlighted below)  
