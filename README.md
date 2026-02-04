@@ -19,7 +19,7 @@ README.md
 
 ## Overview / Motivation
 
-This repository is a reproducibility and extension study of the *Counterfactual Bargaining for Constrained Markov Decision Processes* algorithm.
+This repository is a reproducibility and extension study of the *Counterfactual Programming for Optimal Control* algorithm.
 
 The original paper proposes a primal–dual bargaining mechanism that relaxes hard resource constraints by introducing endogenous slack variables, allowing agents to trade constraint violations against
 objective value.
