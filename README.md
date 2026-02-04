@@ -237,6 +237,45 @@ Arrow length corresponds to action probability.
 
 #### PCTL / Until Extension
 
+# Experiment 4 — PCTL Avoidance under Slip (Baseline Infeasible)
+
+**World:** 5×5 grid, slip=0.1  
+**Unsafe region:** G2 (highlighted below)  
+**Spec:** P(♦ G2) ≤ 0 (avoid with 100% probability)  
+**Goal:** reach G
+
+<p align="center">
+  <img src="theory/experiments/grid_pctl.png" width="45%" />
+</p>
+
+## Baseline (hard spec)
+Baseline LP is infeasible under slip=0.1 with the hard avoidance bound P(♦G2) ≤ 0.
+
+## Bargaining results (two β settings)
+
+| β (for G2) | q (original) | q_eff (final) | P(♦G2) achieved | raw cost | penalty | all-in |
+|---:|---:|---:|---:|---:|---:|---:|
+| 0.1  | 0.000000 | 0.195174 | 0.195174 | 8.837238 | 0.190465 | 9.027707 |
+| 0.01 | 0.000000 | 0.114409 | 0.113839 | 9.092274 | 0.654475 | 9.746752 |
+
+Interpretation: smaller β makes relaxing the spec more expensive, so the algorithm chooses a smaller q_eff but pays a larger penalty.
+
+### β = 0.1
+
+<p align="center">
+  <img src="theory/experiments/p0.1.png" width="32%" />
+  <img src="theory/experiments/c0.1" width="32%" />
+  <img src="theory/experiments/grid_pctl.png" width="32%" />
+</p>
+
+### β = 0.01
+
+<p align="center">
+  <img src="theory/experiments/p0.01.png" width="32%" />
+  <img src="theory/experiments/c0.01_dx1.png" width="32%" />
+  <img src="theory/experiments/grid_pctl.png" width="32%" />
+</p>
+
 ### How to Reproduce Results
 
 #### Numeric Experiments
