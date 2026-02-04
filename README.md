@@ -1,8 +1,6 @@
 This repository reproduces the counterfactual bargaining algorithm from **Counterfactual Programming for Optimal Control**, validates it on numeric CMDPs, and extends it to logical (PCTL-style) constraints via augmented MDPs.
 
 README.md
-├─ Overview / Motivation
-├─ Reference Paper
 ├─ What Is Reproduced
 ├─ Repository Structure
 ├─ Mathematical Formulation (Short!)
@@ -37,4 +35,19 @@ This work is based on:
 >Luiz F. O. Chamon, Santiago Paternain, Alejandro Ribeiro, 2nd Annual Conference on Learning for Dynamics and Control / Proceedings of Machine Learning Research 120:1–10, 2020. 
 
 All algorithmic choices marked as “paper-style” follow the original formulation unless stated otherwise.
+
+## What Is Reproduced
+
+- Counterfactual bargaining primal–dual loop
+- Occupancy-measure LP formulation
+- Endogenous slack variables with quadratic penalties
+- Support for **multiple constraints** (energy, time, logic)
+- Paper-style dual updates using previous-iterate residuals
+
+## What Is Extended
+
+- Unified LP formulation with arbitrary linear constraints
+- Extension to **PCTL reachability and Until formulas**
+- Augmented MDP construction with region and Until flags
+
 
