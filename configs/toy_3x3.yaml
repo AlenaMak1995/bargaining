@@ -1,0 +1,43 @@
+experiment_name: toy_3x3_pd
+seed: 0
+out_dir: results/toy_3x3_pd
+
+env:
+  slip: 0.0
+  start: [2, 0]
+  goal:  [0, 2]
+
+costs:
+  price:
+    - [3, 3, 0]
+    - [3, 2, 1]
+    - [0, 1, 1]
+  energy:
+    - [1, 1, 0]
+    - [1, 5, 5]
+    - [0, 5, 5]
+  time:
+    - [2, 1, 0]
+    - [1, 1, 2]
+    - [0, 2, 1]
+
+constraints:
+  Emax: 10.0
+  Tmax: 3.0
+  betaE: 1.5
+  betaT: 1.5
+
+solver:
+  rho: 1.0e-6
+  alpha: 0.02
+  etaE: 0.02
+  etaT: 0.02
+  iters: 600
+  lamE0: 0.0
+  lamT0: 0.0
+  cvxpy_solver: OSQP
+  verbose_every: 50
+
+save:
+  history_csv: true
+  summary_json: true
