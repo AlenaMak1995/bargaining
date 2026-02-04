@@ -186,11 +186,55 @@ satisfying energy and time budgets (possibly relaxed via bargaining).
 >to reduce price, paying a negligible penalty.
 
 
+**Experiment 3**
+
+**Parameters**
+
+- β_E = 10.5, β_T = 1.5
+- E_max = 10, T_max = 5
+- Slip = 0.1
+
+**Baseline**
+- Feasible = 6.98.
+
+**Bargaining result**
+- λ_E = 0.48 → slack_E = 5.02
+- λ_T = 0.26 → slack_T = 0.39
+- Raw price: 4.47
+- Penalty: 1.25
+- **Total cost:** 5.72
+
+>Increasing β_E encourages the solver to violate energy more aggressively,
+>leading to a substantially cheaper raw path at the expense of higher slack cost.
+
+### Convergence behavior
+
+Across all experiments, the primal iterate difference
+‖xᵗ − xᵗ⁻¹‖₁ decreases to near-machine precision.
+
+Key patterns:
+- Initial oscillations due to dual updates
+- Log-linear decay after effective budget stabilization
+- Faster convergence once slacks settle
 
 <p align="center">
-  <img src="theory/experiments/c1.png" width="55%" />
-  <img src="theory/experiments/p1.png" width="32%" />
+  <img src="theory/experiments/c1.png" width="30%" />
+  <img src="theory/experiments/c2.png" width="30%" />
+  <img src="theory/experiments/c3.png" width="30%" />
 </p>
+  
+### Final policies
+
+Below we show the induced stochastic policies for each experiment.
+Arrow length corresponds to action probability.
+
+<p align="center">
+  <img src="theory/experiments/p1.png" width="30%" />
+  <img src="theory/experiments/p2.png" width="30%" />
+  <img src="theory/experiments/p3.png" width="30%" />
+</p>
+
+
 #### PCTL / Until Extension
 
 ### How to Reproduce Results
