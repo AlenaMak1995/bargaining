@@ -88,21 +88,34 @@ Following the counterfactual bargaining framework, each hard constraint is relax
 
 ![Slack](theory/slack_penalty.png) 
 
-Slack variables are penalized quadratically (our chosen form to be strongly convex):
+The counterfactual bargaining framework does not modify the optimization problem directly. Instead, it introduces a *specification cost*
+function
 
 ![Cost](theory/cost.png)
 
-where *β_i* > 0 controls the cost of violating constraint *i*.
+where *β_i* > 0 controls the cost of violating constraint *i*. 
 
 We also optionally include a strongly convex regularizer (ρ^2 ∥x∥2)/2 with ρ > 0. 
 
-For quadratic specification costs h_i(s_i) = (1 / 2β_i) s_i^2, the compromise condition ∇h(s) = λ implies s_i = β_i λ_i.
+The role of $h$ is not to regularize the objective, but to define a *compromise specification* that trades off performance improvement
+against specification cost. Following paper formulation, the compromise specification *s†* is characterized by the condition
+
+∇h(s) = λ*(s)
+
+where λ*(s) denotes the optimal dual variables of optimisation problem for the specification *s*.
+
+Algorithm 1 enforces this equilibrium implicitly by coupling the primal–dual dynamics with the inverse map s = (∇h)^{-1}(λ). For quadratic specification costs
+h(s) = Σ_i (1/(2β_i)) s_i², this yields the explicit relation
+
+  s_i = β_i λ_i,
+
+which can be interpreted as an endogenously adjusted specification level that increases only when the corresponding constraint remains difficult to satisfy.
 
 At equilibrium, the resulting saddle point corresponds to the KKT conditions of the following slack-augmented optimization problem:
 
-![Problem](theory/opt_problem.png)
+![Problem](theory/opt_penalty.png)
 
-This problem is **not solved directly**. Instead, the primal–dual algorithm in the paper enforces its optimality conditions implicitly via counterfactual updates of the dual variables.
+The primal–dual algorithm in the paper enforces its optimality conditions implicitly via counterfactual updates of the dual variables.
 
 ### Algorithms Implemented
 
