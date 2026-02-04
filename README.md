@@ -50,7 +50,7 @@ All algorithmic choices marked as “paper-style” follow the original formulat
 - Extension to **PCTL reachability and Until formulas**
 - Augmented MDP construction with region and Until flags
 
-## Repository Structure 
+## Repository Structure (In process of editing)
 
 - grid/ # GridWorld and slip-MDP models
 - numeric/ # Numeric CMDP bargaining experiments
