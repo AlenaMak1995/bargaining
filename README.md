@@ -139,9 +139,9 @@ satisfying energy and time budgets (possibly relaxed via bargaining).
 
 | Exp | β_E | β_T | E_max | T_max | Baseline | Price (raw) | Penalty | Total |
 |----:|----:|----:|------:|------:|:--------:|------------:|--------:|------:|
-| 1 | 1.5 | 1.5 | 3 | 3 | ❌ infeasible | 9.88 | 1.25 | 11.13 |
-| 2 | 1.5 | 1.5 | 10 | 5 | ✅ feasible | 6.61 | 0.19 | 6.80 |
-| 3 | 10.5 | 1.5 | 10 | 5 | ✅ feasible | 4.47 | 1.25 | 5.72 |
+| 1 | 1.5 | 1.5 | 3 | 3 | infeasible | 9.88 | 1.25 | 11.13 |
+| 2 | 1.5 | 1.5 | 10 | 5 | feasible (6.98) | 6.61 | 0.19 | 6.80 |
+| 3 | 10.5 | 1.5 | 10 | 5 | feasible (6.98)  | 4.47 | 1.25 | 5.72 |
 
 
 
