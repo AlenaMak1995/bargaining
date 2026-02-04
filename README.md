@@ -1,17 +1,5 @@
 This repository reproduces the counterfactual bargaining algorithm from **Counterfactual Programming for Optimal Control**, validates it on numeric CMDPs, and extends it to logical (PCTL-style) constraints via augmented MDPs.
 
-README.md
-├─ Algorithms Implemented
-│   ├─ Numeric Counterfactual Bargaining
-│   └─ PCTL / Until Extension
-├─ How to Reproduce Results
-│   ├─ Numeric Experiments
-│   └─ PCTL Experiments
-├─ Expected Outputs
-├─ Notes on Differences from the Paper
-├─ Limitations & Future Work
-└─ Citation
-
 ## Overview / Motivation
 
 This repository is a reproducibility and extension study of the *Counterfactual Programming for Optimal Control* algorithm.
@@ -116,3 +104,20 @@ At equilibrium, the resulting saddle point corresponds to the KKT conditions of 
 
 This problem is **not solved directly**. Instead, the primal–dual algorithm in the paper enforces its optimality conditions implicitly via counterfactual updates of the dual variables.
 
+### Algorithms Implemented
+
+#### Numeric Counterfactual Bargaining
+#### PCTL / Until Extension
+
+### How to Reproduce Results
+
+#### Numeric Experiments
+#### PCTL Experiments
+
+### Expected Outputs
+
+### Notes on Differences from the Paper
+
+### Limitations & Future Work
+
+### Citation
