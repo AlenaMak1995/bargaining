@@ -143,6 +143,29 @@ satisfying energy and time budgets (possibly relaxed via bargaining).
 | 2 | 1.5 | 1.5 | 10 | 5 | feasible (6.98) | 6.61 | 0.19 | 6.80 |
 | 3 | 10.5 | 1.5 | 10 | 5 | feasible (6.98)  | 4.47 | 1.25 | 5.72 |
 
+**Parameters**
+
+- β_E = 1.5, β_T = 1.5
+- E_max = 3, T_max = 3
+- Slip = 0.1
+
+**Baseline**
+- Infeasible under hard constraints.
+
+**Bargaining result**
+- λ_E = 0.85 → slack_E = 1.27
+- λ_T = 0.97 → slack_T = 1.46
+- Raw price: 9.88
+- Penalty: 1.25
+- **Total cost:** 11.13
+
+<p align="center">
+  <img src="theory/experiments/c1.png" width="32%" />
+  <img src="theory/experiments/p1.png" width="32%" />
+</p>
+
+>Bargaining restores feasibility by relaxing both budgets, producing a
+>stable policy that reaches the goal while paying a moderate penalty.
 
 
 #### PCTL / Until Extension
