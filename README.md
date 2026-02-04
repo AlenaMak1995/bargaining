@@ -64,7 +64,7 @@ All algorithmic choices marked as “paper-style” follow the original formulat
 ### CMDP and Occupancy Measures
 We consider a finite Markov Decision Process
 
-![CMDP formulation](theory/cmdp.png) 
+![CMDP formulation](theory/cmdp1.png) 
 
 where *S* is a finite state space, *A* a finite action space, *P(s,a,s')* the probability transition matrix, and *s_0* the initial state.
 Goal states are absorbing.
