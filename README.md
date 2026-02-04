@@ -84,3 +84,12 @@ Occupancy measures satisfy the SSP flow constraints
 which can be written compactly in matrix form as
 
 ![Flow matrix](theory/flow_matrix.png) 
+
+### Objective and Resource constraints
+
+Let c ∈ R^{|E|} denote the primary cost vector and f_i ∈ R^{|E|} denote linear resource cost vectors (e.g., energy, time), with corresponding budgets B_i ∈ R.
+
+The hard-constrained CMDP is:
+
+
+
