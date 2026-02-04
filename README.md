@@ -120,6 +120,8 @@ The primal–dual algorithm in the paper enforces its optimality conditions impl
 ### Algorithms Implemented
 
 #### Numeric Counterfactual Bargaining
+
+
 #### PCTL / Until Extension
 
 ### How to Reproduce Results
