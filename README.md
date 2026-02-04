@@ -91,5 +91,12 @@ Let c ∈ R^{|E|} denote the primary cost vector and f_i ∈ R^{|E|} denote line
 
 The hard-constrained CMDP is:
 
+![Hard CMDP](theory/cmdp_formulation.png) 
+
+This problem may be infeasible or overly restrictive.
+
+### Counterfactual Bargaining Relaxation
+
+
 
 
