@@ -258,7 +258,7 @@ Baseline LP is infeasible under slip=0.1 with the hard avoidance bound P(♦G2) 
 | 0.1  | 0.000000 | inf |0.195174 | 0.195174 | 8.837238 | 0.190465 | 9.027707 |
 | 0.01 | 0.000000 | inf |0.114409 | 0.113839 | 9.092274 | 0.654475 | 9.746752 |
 
-Interpretation: smaller β makes relaxing the spec more expensive, so the algorithm chooses a smaller q_eff but pays a larger penalty.
+Interpretation: smaller β makes relaxing the spec more expensive, so the algorithm chooses a smaller probability threshold but pays a larger penalty.
 
 ### β = 0.1
 
