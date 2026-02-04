@@ -143,6 +143,8 @@ satisfying energy and time budgets (possibly relaxed via bargaining).
 | 2 | 1.5 | 1.5 | 10 | 5 | feasible (6.98) | 6.61 | 0.19 | 6.80 |
 | 3 | 10.5 | 1.5 | 10 | 5 | feasible (6.98)  | 4.47 | 1.25 | 5.72 |
 
+**Experiment 1**
+
 **Parameters**
 
 - β_E = 1.5, β_T = 1.5
@@ -159,15 +161,36 @@ satisfying energy and time budgets (possibly relaxed via bargaining).
 - Penalty: 1.25
 - **Total cost:** 11.13
 
+>Bargaining restores feasibility by relaxing both budgets, producing a
+>stable policy that reaches the goal while paying a moderate penalty.
+
+**Experiment 2**
+
+**Parameters**
+
+- β_E = 1.5, β_T = 1.5
+- E_max = 10, T_max = 5
+- Slip = 0.1
+
+**Baseline**
+- Feasible = 6.98.
+
+**Bargaining result**
+- λ_E = 0.5 → slack_E = 0.75
+- λ_T = 0.02 → slack_T = 0.03
+- Raw price: 6.61
+- Penalty: 0.19
+- **Total cost:** 6.8
+
+>Although the baseline is feasible, bargaining slightly relaxes constraints
+>to reduce price, paying a negligible penalty.
+
+
+
 <p align="center">
   <img src="theory/experiments/c1.png" width="55%" />
   <img src="theory/experiments/p1.png" width="32%" />
 </p>
-
->Bargaining restores feasibility by relaxing both budgets, producing a
->stable policy that reaches the goal while paying a moderate penalty.
-
-
 #### PCTL / Until Extension
 
 ### How to Reproduce Results
