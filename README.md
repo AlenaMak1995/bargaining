@@ -97,6 +97,23 @@ This problem may be infeasible or overly restrictive.
 
 ### Counterfactual Bargaining Relaxation
 
+Following the counterfactual bargaining framework, each hard constraint is relaxed by introducing a nonnegative slack variable *s_i*:
 
+![Slack](theory/slack_penalty.png) 
 
+Slack variables are penalized quadratically (our chosen form to be strongly convex):
+
+![Cost](theory/cost.png)
+
+where *β_i* > 0 controls the cost of violating constraint *i*.
+
+We also optionally include a strongly convex regularizer (ρ^2 ∥x∥2)/2 with ρ > 0. 
+
+For quadratic specification costs h_i(s_i) = (1 / 2β_i) s_i^2, the compromise condition ∇h(s) = λ implies s_i = β_i λ_i.
+
+At equilibrium, the resulting saddle point corresponds to the KKT conditions of the following slack-augmented optimization problem:
+
+![Problem](theory/opt_problem.png)
+
+This problem is **not solved directly**. Instead, the primal–dual algorithm in the paper enforces its optimality conditions implicitly via counterfactual updates of the dual variables.
 
