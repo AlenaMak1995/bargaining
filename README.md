@@ -253,7 +253,7 @@ Baseline LP is infeasible under slip=0.1 with the hard avoidance bound P(♦G2) 
 
 ## Bargaining results (two β settings)
 
-| β (for G2) | q (original) | q_eff (final) | P(♦G2) achieved | raw cost | penalty | all-in |
+| β (for G2) | Original probability threshold | Bargained  probability threshold | P(♦G2) achieved | Bargained raw cost | Bargained penalty | Bargained total cost |
 |---:|---:|---:|---:|---:|---:|---:|
 | 0.1  | 0.000000 | 0.195174 | 0.195174 | 8.837238 | 0.190465 | 9.027707 |
 | 0.01 | 0.000000 | 0.114409 | 0.113839 | 9.092274 | 0.654475 | 9.746752 |
