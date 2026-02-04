@@ -1,1 +1,1 @@
-SSP occupancy-measure optimization with PCTL-style constraints, plus constraint bargaining via slacks/specifications.
+This repository reproduces the counterfactual bargaining algorithm from **Counterfactual Programming for Optimal Control**, validates it on numeric CMDPs, and extends it to logical (PCTL-style) constraints via augmented MDPs.
