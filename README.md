@@ -59,3 +59,5 @@ All algorithmic choices marked as “paper-style” follow the original formulat
 - scripts/ # Reproducibility scripts
 - configs/ # Experiment configs
 
+
+![CMDP formulation](theory/cmdp.png)
