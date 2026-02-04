@@ -264,7 +264,7 @@ Interpretation: smaller β makes relaxing the spec more expensive, so the algori
 
 <p align="center">
   <img src="theory/experiments/p0.1.png" width="32%" />
-  <img src="theory/experiments/c0.1" width="32%" />
+  <img src="theory/experiments/c0.1.png" width="32%" />
   <img src="theory/experiments/grid_pctl.png" width="32%" />
 </p>
 
