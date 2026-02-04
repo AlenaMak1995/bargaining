@@ -121,6 +121,22 @@ The primal–dual algorithm in the paper enforces its optimality conditions impl
 
 #### Numeric Counterfactual Bargaining
 
+**Problem setup**
+
+We consider a stochastic shortest-path gridworld with slip probability 0.1.
+The agent starts at **S** and aims to reach **G**, minimizing price while
+satisfying energy and time budgets (possibly relaxed via bargaining).
+
+**Cost grids:**
+
+<p align="center">
+  <img src="theory/experiments/price.png" width="30%" />
+  <img src="theory/experiments/energy.png" width="30%" />
+  <img src="theory/experiments/time.png" width="30%" />
+</p>
+
+
+
 
 #### PCTL / Until Extension
 
