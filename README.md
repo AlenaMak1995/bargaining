@@ -73,3 +73,14 @@ Instead of policies, we work with *occupancy measures*
 
 ![Occupancy](theory/occupancy.png) 
 
+which represent the expected number of times action *a* is taken in state *s*.
+
+### Flow constraints
+
+Occupancy measures satisfy the SSP flow constraints
+
+![Flow](theory/flow.png) 
+
+which can be written compactly in matrix form as
+
+![Flow matrix](theory/flow_matrix.png) 
