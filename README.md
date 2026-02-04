@@ -50,4 +50,14 @@ All algorithmic choices marked as “paper-style” follow the original formulat
 - Extension to **PCTL reachability and Until formulas**
 - Augmented MDP construction with region and Until flags
 
+## Repository Structure 
+
+- grid/ # GridWorld and slip-MDP models
+- numeric/ # Numeric CMDP bargaining experiments
+- pctl/ # PCTL and Until specifications
+- lp_solvers.py # Global LP baselines
+- bargaining_numeric_constraints.py
+- pctl_solvers.py # Augmented MDP + PCTL LP construction
+- scripts/ # Reproducibility scripts
+- configs/ # Experiment configs
 
