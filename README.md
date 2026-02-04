@@ -1,7 +1,6 @@
 This repository reproduces the counterfactual bargaining algorithm from **Counterfactual Programming for Optimal Control**, validates it on numeric CMDPs, and extends it to logical (PCTL-style) constraints via augmented MDPs.
 
 README.md
-├─ Mathematical Formulation (Short!)
 ├─ Algorithms Implemented
 │   ├─ Numeric Counterfactual Bargaining
 │   └─ PCTL / Until Extension
