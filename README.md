@@ -137,7 +137,7 @@ satisfying energy and time budgets (possibly relaxed via bargaining).
 
 ### Experiment overview
 
-| Exp | β_E | β_T | E_max | T_max | Baseline | Price (raw) | Penalty | Total |
+| Exp | β_E | β_T | E_max | T_max | Baseline | Bargained Price (raw) | Bargained Penalty |Bargained Total |
 |----:|----:|----:|------:|------:|:--------:|------------:|--------:|------:|
 | 1 | 1.5 | 1.5 | 3 | 3 | infeasible | 9.88 | 1.25 | 11.13 |
 | 2 | 1.5 | 1.5 | 10 | 5 | feasible (6.98) | 6.61 | 0.19 | 6.80 |
