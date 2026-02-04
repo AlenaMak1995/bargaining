@@ -28,3 +28,13 @@ In this project, we:
 1. Reproduce the original algorithm on numeric CMDPs.
 2. Validate convergence behavior and constraint satisfaction.
 3. Extend the approach to probabilistic temporal logic (PCTL) constraints using augmented MDPs and occupancy-measure LP formulations.
+
+## Reference
+
+This work is based on:
+
+> **Counterfactual Programming for Optimal Control**  
+>Luiz F. O. Chamon, Santiago Paternain, Alejandro Ribeiro, 2nd Annual Conference on Learning for Dynamics and Control / Proceedings of Machine Learning Research 120:1–10, 2020. 
+
+All algorithmic choices marked as “paper-style” follow the original formulation unless stated otherwise.
+
