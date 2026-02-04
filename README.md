@@ -160,7 +160,7 @@ satisfying energy and time budgets (possibly relaxed via bargaining).
 - **Total cost:** 11.13
 
 <p align="center">
-  <img src="theory/experiments/c1.png" width="52%" />
+  <img src="theory/experiments/c1.png" width="55%" />
   <img src="theory/experiments/p1.png" width="32%" />
 </p>
 
