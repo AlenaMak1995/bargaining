@@ -370,7 +370,6 @@ high probability under slip.
 | Total cost | 10.247875 |
 | Achieved probability p(x) | **0.763129** |
 | Slack s | 0.166871 |
-| Effective threshold q_eff | 0.763129 |
 
 <p align="center">
   <img src="theory/experiments/value1.png" width="48%" />
@@ -409,7 +408,6 @@ The baseline LP is **feasible**.
 | Total cost | 23.523464 |
 | Achieved probability p(x) | **0.795989** |
 | Slack s | 0.003811 |
-| Effective threshold q_eff | 0.796189 |
 
 <p align="center">
   <img src="theory/experiments/value2.png" width="48%" />
