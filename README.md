@@ -396,7 +396,7 @@ This corresponds to a real road where:
 P( G2 U G3 ) ≥ 0.8
 
 
-The baseline LP is **feasible**.
+The baseline LP is **feasible**. The initial cost is 25.3122. 
 
 ### Bargaining result
 
