@@ -274,6 +274,191 @@ Interpretation: smaller β makes relaxing the spec more expensive, so the algori
   <img src="theory/experiments/c0.01.png" width="55%" />
 </p>
 
+## PCTL Until Extension — Corridor Compliance under Uncertainty
+
+This section studies **PCTL until constraints** in stochastic grid worlds and
+demonstrates how **bargaining** resolves infeasible or overly strict specifications.
+
+We focus on constraints of the form
+
+P( G2 U G3 ) ≥ q
+
+which require the agent to remain inside a designated corridor (G2) until it
+reaches a safe exit (G3), with probability at least q.
+
+---
+
+### Corridor design and “rules of the road” interpretation
+
+The corridor is intentionally designed to model **realistic rule-constrained motion**:
+
+- **G2** represents a *regulated corridor*, such as:
+  - a bike lane,
+  - a construction zone,
+  - a narrow bridge,
+  - or a lane with right-of-way rules.
+
+- **G3** represents a *designated safe exit*, such as:
+  - a protected merge,
+  - a legal crossing,
+  - or the end of a restricted maneuver.
+
+The PCTL formula
+
+P( G2 U G3 ) ≥ q
+
+
+means:
+
+> *If the agent enters the regulated corridor (G2), it should remain inside it
+until it reaches the designated exit (G3), with probability at least q.*
+
+---
+
+### Why the corridor has this shape
+
+The corridor is deliberately **thin and constrained**:
+
+- Entering G2 requires commitment.
+- Exiting sideways corresponds to:
+  - unsafe lane changes,
+  - illegal exits,
+  - stepping out of a protected bike lane.
+
+Under stochastic dynamics (slip), staying inside the corridor becomes difficult:
+random perturbations may push the agent sideways, even when following a careful
+policy.
+
+This creates a realistic **tradeoff** between:
+- safety / rule compliance, and
+- efficiency / cost.
+
+<p align="center">
+  <img src="theory/experiments/grid_until.png" width="45%" />
+</p>
+
+---
+
+### World setup
+
+- **Grid:** 5×5  
+- **Slip probability:** 0.1  
+- **Costs:** identical across experiments  
+- **Penalty parameter:** β = 0.01 (fixed)
+
+The only difference between experiments is the **probability threshold q**.
+
+---
+
+## Experiment 5.a — Infeasible Baseline
+
+**Specification:**
+
+P( G2 U G3 ) ≥ 0.93
+
+
+The baseline LP is **infeasible**: no policy can satisfy this constraint with
+high probability under slip.
+
+### Bargaining result
+
+| Quantity | Value |
+|---|---:|
+| Iterations | 10,000 |
+| Raw cost | 8.855573 |
+| Penalty | 1.392300 |
+| Total cost | 10.247875 |
+| Achieved probability p(x) | **0.763129** |
+| Slack s | 0.166871 |
+| Effective threshold q_eff | 0.763129 |
+
+<p align="center">
+  <img src="theory/experiments/value1.png" width="48%" />
+  <img src="theory/experiments/cuntil1.png" width="48%" />
+</p>
+
+**Interpretation:**
+
+- The rule is too strict for the environment.
+- Bargaining relaxes the constraint significantly.
+- The agent chooses a cheaper path and accepts a lower compliance probability,
+  paying a non-trivial penalty.
+
+This corresponds to a real road where:
+- the corridor is too narrow,
+- buffers are insufficient,
+- or noise makes strict compliance unrealistic.
+
+---
+
+## Experiment 5.b — Feasible Baseline
+
+**Specification:**
+P( G2 U G3 ) ≥ 0.8
+
+
+The baseline LP is **feasible**.
+
+### Bargaining result
+
+| Quantity | Value |
+|---|---:|
+| Iterations | 10,000 |
+| Raw cost | 23.522615 |
+| Penalty | 0.000726 |
+| Total cost | 23.523464 |
+| Achieved probability p(x) | **0.795989** |
+| Slack s | 0.003811 |
+| Effective threshold q_eff | 0.796189 |
+
+<p align="center">
+  <img src="theory/experiments/value2.png" width="48%" />
+  <img src="theory/experiments/cuntil2.png" width="48%" />
+</p>
+
+**Interpretation:**
+
+- The constraint is attainable.
+- The algorithm prefers to pay a **much higher raw cost** to remain near the
+  specified probability threshold.
+- Only a negligible relaxation is applied.
+
+This mirrors real road design where:
+- compliance is achievable,
+- but requires slower, more cautious, and more expensive maneuvers.
+
+---
+
+## Why the outcomes differ (even with the same β)
+
+Although both experiments use:
+- the **same MDP**,
+- the **same costs**,
+- the **same penalty parameter β**,
+
+they converge to **very different policies**.
+
+This is expected:
+
+- Changing q changes the feasible set.
+- The cost–probability Pareto frontier is steep.
+- β controls *how expensive violations are*, not *what probability is targeted*.
+
+**Infeasible specs → low cost + large slack.**  
+**Feasible specs → high cost + minimal slack.**
+
+---
+
+## Takeaway
+
+> The corridor encodes how much commitment the road demands.  
+> Bargaining reveals whether that commitment is realistic under uncertainty.
+
+Rather than failing on infeasible specifications, the algorithm produces a
+quantified tradeoff between **rule compliance** and **operational cost**.
+
+
+
 ### How to Reproduce Results
 
 #### Numeric Experiments
